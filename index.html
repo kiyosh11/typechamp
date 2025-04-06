@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeChamp - Master Your Keys</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="neon">
+    <div id="navbar">
+        <a href="#" onclick="return false;">Home</a>
+        <a href="https://github.com/kiyosh11" target="_blank">GitHub</a>
+        <a href="https://x.com/_kiyosh1" target="_blank">X</a>
+        <a href="#" onclick="showStats(); return false;">Stats</a>
+        <input type="checkbox" id="practice-mode" onchange="togglePracticeMode()">
+        <label for="practice-mode">Practice Mode</label>
+    </div>
+    <div id="background-effects"></div>
+    <div id="test-area">
+        <h1>TypeChamp</h1>
+        <div id="sentence"><span id="caret"></span></div>
+        <input type="text" id="input" placeholder="Click Start - Champ Your Keys" autocomplete="off" autocorrect="off" spellcheck="false" disabled>
+        <div id="buttons">
+            <button id="start-btn">Start</button>
+            <button id="reset-btn">Reset</button>
+            <button id="settings-btn">Settings</button>
+        </div>
+        <div id="shortcuts">Shortcuts: Ctrl+S (Start) | Ctrl+R (Reset) | Ctrl+T (Settings)</div>
+        <div id="stats">
+            <span id="countdown">Time: 30s</span>
+            <span id="wpm">WPM: 0</span>
+            <span id="errors">Errors: 0</span>
+            <span id="accuracy">Accuracy: 0%</span>
+            <span id="high-score">High Score: 0</span>
+        </div>
+    </div>
+    <div id="settings-panel">
+        <h2>TypeChamp Controls</h2>
+        <div class="setting">
+            <label>Time (seconds):</label>
+            <select id="time-setting">
+                <option value="15">15s</option>
+                <option value="30" selected>30s</option>
+                <option value="60">60s</option>
+                <option value="120">120s</option>
+                <option value="custom">Custom</option>
+            </select>
+            <input type="number" id="custom-time" min="5" max="600" value="30" style="display: none;">
+        </div>
+        <div class="setting">
+            <label>Word Count:</label>
+            <input type="range" id="word-count-setting" min="10" max="50" value="25">
+            <span id="word-count-value">25</span>
+        </div>
+        <div class="setting">
+            <label>Word Length:</label>
+            <select id="word-length-setting">
+                <option value="short">Short (3-5)</option>
+                <option value="medium" selected>Medium (6-8)</option>
+                <option value="long">Long (9+)</option>
+                <option value="mixed">Mixed</option>
+            </select>
+        </div>
+        <div class="setting">
+            <label>Difficulty:</label>
+            <select id="difficulty-setting">
+                <option value="easy" selected>Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <div class="setting">
+            <label>Punctuation:</label>
+            <select id="punctuation-setting">
+                <option value="off" selected>Off</option>
+                <option value="on">On</option>
+            </select>
+        </div>
+        <div class="setting">
+            <label>Numbers:</label>
+            <select id="numbers-setting">
+                <option value="off" selected>Off</option>
+                <option value="on">On</option>
+            </select>
+        </div>
+        <div class="setting">
+            <label>Theme:</label>
+            <select id="theme-setting">
+                <option value="neon" selected>Neon</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+                <option value="cyber">Cyber</option>
+                <option value="retro">Retro</option>
+            </select>
+        </div>
+        <div class="setting">
+            <label>Font Size:</label>
+            <select id="font-size-setting">
+                <option value="small">Small</option>
+                <option value="medium" selected>Medium</option>
+                <option value="large">Large</option>
+                <option value="x-large">X-Large</option>
+            </select>
+        </div>
+        <div class="setting">
+            <label>Caret:</label>
+            <select id="caret-setting">
+                <option value="off" selected>Off</option>
+                <option value="line">Line</option>
+                <option value="block">Block</option>
+            </select>
+        </div>
+        <div class="setting">
+            <label>Animation:</label>
+            <select id="animation-setting">
+                <option value="on" selected>On</option>
+                <option value="off">Off</option>
+            </select>
+        </div>
+        <div class="setting">
+            <label>Show Stats:</label>
+            <div>
+                <input type="checkbox" id="show-wpm" checked> WPM
+                <input type="checkbox" id="show-errors" checked> Errors
+                <input type="checkbox" id="show-accuracy" checked> Accuracy
+            </div>
+        </div>
+        <button id="close-settings">Close</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
