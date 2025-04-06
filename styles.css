@@ -170,7 +170,7 @@ body.retro #sentence { color: #88aa88; }
 
 #sentence span.incorrect { color: #ff3366; text-shadow: 0 0 10px #ff3366; }
 
-#sentence span.extra { color: #444; background-color: rgba(255, 51的应用
+#sentence span.extra { color: #444; background-color: rgba(255, 51, 102, 0.1); }
 
 body.light #sentence span.correct { color: #0066cc; text-shadow: none; }
 
@@ -393,4 +393,4 @@ body.retro .setting input[type="checkbox"]:checked::after { color: #00cc00; }
     #stats { font-size: clamp(0.8em, 2.5vw, 1.1em); }
     #buttons { gap: 10px; }
     #settings-panel { top: 60%; width: 90vw; }
-  }
+}
